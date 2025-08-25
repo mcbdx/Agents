@@ -17,8 +17,8 @@ class RedditSearchParams(ToolParameters):
 
 class TMDBSearchParams(ToolParameters):
     """define TMDB search function parameters"""
-    title: str = Field(..., description="Anime Title")
-    year: int | None = Field(None, description="Year of release") # None is default 
+    terms: str = Field(..., description="Anime Terms")
+    
 
 if __name__ == "__main__":
     print(WeatherParams.model_json_schema())
